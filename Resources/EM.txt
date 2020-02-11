@@ -1,0 +1,93 @@
+#Shaders: 5
+ID 0
+VSFile: ../Resources/Shaders/VSEffect.vs
+FSFile: ../Resources/Shaders/FSBW.fs
+ID 1
+VSFile: ../Resources/Shaders/VSEffect.vs
+FSFile: ../Resources/Shaders/FSBlur.fs
+ID 2
+VSFile: ../Resources/Shaders/VSEffect.vs
+FSFile: ../Resources/Shaders/FSPreBloom.fs
+ID 3
+VSFile: ../Resources/Shaders/VSEffect.vs
+FSFile: ../Resources/Shaders/FSPostBloom.fs
+ID 4
+VSFile: ../Resources/Shaders/VSEffect.vs
+FSFile: ../Resources/Shaders/ShadowMapFS.fs
+
+#FBO
+NoFBO 3
+
+#Effects: 4
+ID 0
+Name BW
+NoPasses: 1
+PassID 0
+PassName BW
+   ShaderID 0
+   Textures: 1c, 0, 0
+   Target: 0
+   OtherData: 0.0
+ID 1
+Name Blur
+NoPasses: 1
+PassID 0
+PassName Blur
+   ShaderID 1
+   Textures: 1c, 0, 0
+   Target: 0
+   OtherData: 0.0
+ID 2
+Name Bloom
+NoPasses: 7
+PassID 0
+PassName Prebloom
+   ShaderID 2
+   Textures: 1c, 0, 0
+   Target: 2
+   OtherData: 0.5 
+PassID 1
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 0, 0
+   Target: 3
+   OtherData: 5.0
+PassID 2
+PassName Blur
+   ShaderID 1
+   Textures: 3c, 0, 0
+   Target: 2
+   OtherData: 9.0
+PassID 3
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 0, 0
+   Target: 3
+   OtherData: 17.0
+PassID 4
+PassName Blur
+   ShaderID 1
+   Textures: 3c, 00, 00
+   Target: 2
+   OtherData: 31
+PassID 5
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 00, 00
+   Target: 3
+   OtherData: 43
+PassID 6
+PassName PostBloom
+   ShaderID 3
+   Textures: 1c, 3c, 0
+   Target: 0
+   OtherData: 1.5
+ID 3
+Name DepthRender
+NoPasses: 1
+PassID 0
+PassName DepthRender
+   ShaderID 4
+   Textures: 3c, 0, 0
+   Target: 0
+   OtherData: 0.0

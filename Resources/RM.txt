@@ -1,0 +1,126 @@
+#Models: 7
+ID 0
+FILE ../Resources/Models/Woman1.nfg
+ID 1
+FILE ../Resources/Models/Woman2.nfg
+ID 2
+FILE ../Resources/Models/SkyBox.nfg
+ID 3
+FILE ../Resources/Models/Bila.nfg
+ID 4
+FILE ../Resources/Models/fire.nfg
+ID 5
+FILE ../Resources/Models/Terrain.nfg
+ID 6
+FILE ../Resources/Models/Water.nfg
+
+#2D Texture: 12
+ID 0
+FILE ../Resources/Textures/Woman1.tga
+TILING REPEAT
+ID 1
+FILE ../Resources/Textures/Woman2.tga
+TILING REPEAT
+ID 2
+FILE ../Resources/Textures/DisplacementMap.tga
+TILING REPEAT
+ID 3
+FILE ../Resources/Textures/fire3.tga
+TILING LINEAR
+ID 4
+FILE ../Resources/Textures/fire_mask.tga
+TILING LINEAR
+ID 5
+FILE ../Resources/Textures/NormalMap.tga
+TILING REPEAT
+ID 6
+FILE ../Resources/Textures/Dirt.tga
+TILING REPEAT
+ID 7
+FILE ../Resources/Textures/Grass.tga
+TILING REPEAT
+ID 8
+FILE ../Resources/Textures/Rock.tga
+TILING REPEAT
+ID 9
+FILE ../Resources/Textures/Terrain_blend_map.tga
+TILING REPEAT
+ID 10
+FILE ../Resources/Textures/WaterNormal.tga
+TILING REPEAT
+ID 11
+FILE ../Resources/Textures/WaterDepth.tga
+TILING REPEAT
+
+#Cube Texture: 1
+ID 0
+FILE ../Resources/Textures/skybox/front.tga
+FILE ../Resources/Textures/skybox/back.tga
+FILE ../Resources/Textures/skybox/up.tga
+FILE ../Resources/Textures/skybox/down.tga
+FILE ../Resources/Textures/skybox/left.tga
+FILE ../Resources/Textures/skybox/right.tga
+TILING CLAMP
+
+#Shaders: 9
+ID 0
+VS ../Resources/Shaders/TriangleShaderVS.vs
+FS ../Resources/Shaders/TriangleShaderFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 1
+VS ../Resources/Shaders/SkyboxVS.vs
+FS ../Resources/Shaders/SkyboxFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 2
+VS ../Resources/Shaders/ReflectionVS.vs
+FS ../Resources/Shaders/ReflectionFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 3
+VS ../Resources/Shaders/FireVS.vs
+FS ../Resources/Shaders/FireFS.fs
+STATES 2
+STATE DEPTH_TEST
+STATE BLEND
+
+ID 4
+VS ../Resources/Shaders/ObjectWithNormalVS.vs
+FS ../Resources/Shaders/ObjectWithNormalFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 5
+VS ../Resources/Shaders/TerrainsVS.vs
+FS ../Resources/Shaders/TerrainsFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 6
+VS ../Resources/Shaders/LightVS.vs
+FS ../Resources/Shaders/LightFS.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 7
+VS ../Resources/Shaders/Effect.vs
+FS ../Resources/Shaders/Effect.fs
+STATES 1
+STATE DEPTH_TEST
+
+ID 8
+VS ../Resources/Shaders/Water.vs
+FS ../Resources/Shaders/Water.fs
+STATES 1
+STATE DEPTH_TEST
+
+STATES 1
+STATE DEPTH_TEST
+
+#Height Map: 1
+ID 0
+FILE ../Resources/Textures/heightmap.raw
