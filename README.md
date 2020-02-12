@@ -1,5 +1,5 @@
-# SimpleOpenGLESFramework
-A simple render framework made by OpenGL ES 2.0  
+# Simple OpenGLES Framework
+A simple render framework made from OpenGL ES 2.0  
 Press A,W,D,S and direction key to move & rotate the camera  
 Press F1, F2, F3, F4 to change post effect  
 
